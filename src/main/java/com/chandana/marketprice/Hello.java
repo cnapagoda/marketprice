@@ -1,4 +1,4 @@
-package com.chandana.spring.boot;
+package com.chandana.marketprice;
 
 /**
  * Created by chandana on 8/31/17.

@@ -1,6 +1,6 @@
-package com.chandana.spring.boot.controller;
+package com.chandana.marketprice.controller;
 
-import com.chandana.spring.boot.Hello;
+import com.chandana.marketprice.Hello;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class RestAPIController {
-
 
     @ApiOperation(value = "getGreeting", notes = "get greeting", nickname = "getGreeting")
     @ApiResponses(value = {
@@ -23,7 +23,7 @@ public class RestAPIController {
             @ApiResponse(code = 404, message = "Service not found"),
             @ApiResponse(code = 200, message = "Successful retrieval",
                          response = String.class)})
-    @RequestMapping(method = RequestMethod.GET, value = "/api/javainuse")
+    @RequestMapping(method = RequestMethod.GET, value = "/javainuse")
     public String sayHello() {
         return "Swagger Hello World";
     }
@@ -34,7 +34,7 @@ public class RestAPIController {
             @ApiResponse(code = 404, message = "Service not found"),
             @ApiResponse(code = 200, message = "Successful retrieval",
                          response = Hello.class)})
-    @RequestMapping(method = RequestMethod.GET, value = "/api/hello/{name}", produces = {"application/json"})
+    @RequestMapping(method = RequestMethod.GET, value = "/hello/{name}", produces = {"application/json"})
     public Hello sayHelloUser(@ApiParam(value = "testId",
                                         required = true, defaultValue = "111") @PathVariable("name")
                               final String name) {
@@ -51,7 +51,7 @@ public class RestAPIController {
             @ApiResponse(code = 404, message = "Service not found"),
             @ApiResponse(code = 200, message = "Successful retrieval",
                          response = Hello.class, responseContainer = "List")})
-    @RequestMapping(method = RequestMethod.GET, value = "/api/list/{name}", produces = {"application/json"})
+    @RequestMapping(method = RequestMethod.GET, value = "/list/{name}", produces = {"application/json"})
     public List<Hello> sayHelloListUser(@ApiParam(value = "testId",
                                         required = true, defaultValue = "111") @PathVariable("name")
                               final String name) {

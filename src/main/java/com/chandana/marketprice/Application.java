@@ -1,4 +1,4 @@
-package com.chandana.spring.boot;
+package com.chandana.marketprice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

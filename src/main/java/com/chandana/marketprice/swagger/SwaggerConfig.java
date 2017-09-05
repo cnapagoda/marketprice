@@ -1,4 +1,4 @@
-package com.chandana.spring.boot.swagger;
+package com.chandana.marketprice.swagger;
 
 import com.google.common.base.Predicate;
 import org.springframework.context.annotation.Bean;

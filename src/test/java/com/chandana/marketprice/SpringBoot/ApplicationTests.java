@@ -1,4 +1,4 @@
-package com.chandana.spring.boot.SpringBoot;
+package com.chandana.marketprice.SpringBoot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
